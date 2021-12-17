@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textArtist"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/btnPlay"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+
+            />
+
+        <ImageView
+            android:id="@+id/btnStop"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/btnPlay"
+            android:layout_marginStart="21dp"
+            android:layout_marginLeft="21dp"
+            android:layout_toEndOf="@id/btnPlay"
+            android:layout_toRightOf="@id/btnPlay"
+            android:src="@drawable/ic_stop" />
+
+        <ImageView
+            android:id="@+id/btnLyrics"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/btnPlay"
+            android:layout_marginStart="21dp"
+            android:layout_marginLeft="21dp"
+            android:layout_toEndOf="@id/btnStop"
+            android:layout_toRightOf="@id/btnStop"
+            android:src="@drawable/ic_baseline_chat_24" />
+    </LinearLayout>
+
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewSongTime"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"
+        android:textSize="20sp"
+
+        android:text="Intentions" />
+
+    <TextView
+        android:id="@+id/textArtist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignStart="@id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="4dp"
+        android:text="Justin Bieber" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00/0.00"
+        android:id="@+id/textViewSongTime"
+        android:layout_marginTop="23dp"
+        android:gravity="center"
+        android:layout_below="@+id/linear"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView4"
+        android:layout_centerHorizontal="true"
+        android:text="18200275 Nguyễn Thanh Tú\n18200198 Trần Tấn Phát" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:text="Lab 4 - Nhom 4A"
+        android:textSize="20sp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3">
+        <TextView
+            android:id="@+id/tvLyrics"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/textView3"
+            android:layout_marginTop="20dp"
+            android:text="@string/lyric"
+            android:textAlignment="center" />
+    </ScrollView>
+
+
+
+
+
+
+</RelativeLayout>
